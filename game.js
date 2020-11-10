@@ -31,8 +31,8 @@ function checkResult(player, robot) {
 function displayResult({ player, robot, result }) {
   const container = document.querySelector(".result");
   container.innerHTML = `
-    Player : ${player} </br>
-    Robot : ${robot} </br>
-    Result : ${result}
+    <h3 class="result__res" >${result}</h3>
+    <p class="result__play" >Player played : ${player}</p>
+    <p class="result__play" >Bot played : ${robot}</p>
   `;
 }
