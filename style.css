@@ -11,32 +11,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  /* justify-content: space-between; */
   background-color: var(--dark);
 }
 
 .title {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 34px;
+  font-size: 26px;
   font-weight: bold;
   color: var(--white);
+  padding: 10% 0;
 }
 
 .game {
-  height: 70%;
-  border: 2px solid green;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game__title {
+  padding-bottom: 20px;
+  color: var(--white);
 }
 
 .game__buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: 1px solid lightblue;
+  justify-content: space-between;
   height: 80%;
+  width: 100%;
 }
 
 .game__button {
-  width: 100%;
-  max-width: 200px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
+  color: var(--dark);
+  background-color: var(--white);
+  border: none;
+}
+
+.result {
+  border: 2px solid aquamarine;
+  width: 80%;
+  margin: 20px;
+  color: var(--white);
 }
