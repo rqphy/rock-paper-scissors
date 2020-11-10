@@ -1,3 +1,42 @@
-h1 {
-  color: blue;
+:root {
+  --dark: #141414;
+  --white: #f5f5f5;
+  --main: #f7720f;
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--dark);
+}
+
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.game {
+  height: 70%;
+  border: 2px solid green;
+}
+
+.game__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 1px solid lightblue;
+  height: 80%;
+}
+
+.game__button {
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
 }
