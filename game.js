@@ -9,6 +9,7 @@ buttons.forEach((button) => {
   });
 });
 
+// call function
 function game(button) {
   const player = button.innerHTML;
   const robot = robotPlay();
@@ -17,10 +18,12 @@ function game(button) {
   updateScore();
 }
 
+// return the bot's play (random)
 function robotPlay() {
   return buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
 }
 
+// check the result of the turn and define the winner
 function checkResult(player, robot) {
   if (player === robot) return "Draw";
   else if (
@@ -36,6 +39,7 @@ function checkResult(player, robot) {
   }
 }
 
+// update result section in HTML to display the result of this turn
 function displayResult({ player, robot, result }) {
   const container = document.querySelector(".result");
   container.innerHTML = `
@@ -45,6 +49,7 @@ function displayResult({ player, robot, result }) {
   `;
 }
 
+// update score section in HTML w/ new score
 function updateScore() {
   const score = document.querySelector(".score");
   score.innerHTML = `Player : ${playerScore} | Bot : ${botScore}`;
