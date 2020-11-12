@@ -1,5 +1,8 @@
 const buttons = document.querySelectorAll(".game__button");
 
+let playerScore = 0;
+let botScore = 0;
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     game(button);
@@ -11,6 +14,7 @@ function game(button) {
   const robot = robotPlay();
   const result = checkResult(player, robot);
   displayResult({ player, robot, result });
+  updateScore();
 }
 
 function robotPlay() {
@@ -23,9 +27,13 @@ function checkResult(player, robot) {
     (player === "Rock" && robot === "Scissors") ||
     (player === "Scissors" && robot === "Paper") ||
     (player === "Paper" && robot === "Rock")
-  )
+  ) {
+    ++playerScore;
     return "Player's win";
-  else return "Robot's win";
+  } else {
+    ++botScore;
+    return "Robot's win";
+  }
 }
 
 function displayResult({ player, robot, result }) {
@@ -35,4 +43,9 @@ function displayResult({ player, robot, result }) {
     <p class="result__play" >Player played : ${player}</p>
     <p class="result__play" >Bot played : ${robot}</p>
   `;
+}
+
+function updateScore() {
+  const score = document.querySelector(".score");
+  score.innerHTML = `Player : ${playerScore} | Bot : ${botScore}`;
 }
