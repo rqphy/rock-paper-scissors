@@ -53,11 +53,16 @@ body {
   cursor: pointer;
 }
 
-.result {
+.result,
+.score {
   font-family: Arial, Helvetica, sans-serif;
   width: 80%;
   margin: 20px;
   color: var(--white);
+}
+
+.score {
+  text-align: center;
 }
 
 .result__res {
