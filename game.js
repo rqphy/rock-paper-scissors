@@ -1,7 +1,10 @@
 const buttons = document.querySelectorAll(".game__button");
+const resetButton = document.querySelector(".reset");
 
 let playerScore = 0;
 let botScore = 0;
+
+resetButton.addEventListener("click", resetScore);
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -53,4 +56,11 @@ function displayResult({ player, robot, result }) {
 function updateScore() {
   const score = document.querySelector(".score");
   score.innerHTML = `Player : ${playerScore} | Bot : ${botScore}`;
+}
+
+// reset the score to 0 - 0
+function resetScore() {
+  playerScore = 0;
+  botScore = 0;
+  updateScore();
 }
