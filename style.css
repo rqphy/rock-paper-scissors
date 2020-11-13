@@ -54,7 +54,8 @@ main {
   max-width: 300px;
 }
 
-.game__button {
+.game__button,
+.reset {
   width: 70px;
   height: 70px;
   color: var(--white);
@@ -84,4 +85,9 @@ main {
 
 .result__play {
   margin-bottom: 4px;
+}
+
+.reset {
+  height: 40px;
+  width: 120px;
 }
