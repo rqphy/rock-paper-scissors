@@ -63,4 +63,11 @@ function resetScore() {
   playerScore = 0;
   botScore = 0;
   updateScore();
+  cleanResult();
+}
+
+// cleanup the result section
+function cleanResult() {
+  const container = document.querySelector(".result");
+  container.innerHTML = "";
 }
